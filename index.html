@@ -1,244 +1,188 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <title>SoulTest Landing Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>SoulTest Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    .nav-link {
+      position: relative;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+    .nav-link::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #333;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .nav-link:hover::before {
+      transform: scaleX(1);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .blink {
+      animation: blink-animation 1s ease-in-out 3;
+    }
+    @keyframes blink-animation {
+      0%, 100% { background-color: #fff3cd; }
+      50% { background-color: #ffeeba; }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#3a8ea7] to-[#d1c3b7] min-h-screen text-white">
 
-      .nav-link {
-        position: relative;
-        display: inline-block;
-        transition: color 0.3s ease;
-      }
-
-      .nav-link::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: -4px;
-        left: 0;
-        background-color: #333;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.4s ease;
-      }
-
-      .nav-link:hover::before {
-        transform: scaleX(1);
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </head>
-  <body class="bg-gradient-to-br from-[#3a8ea7] to-[#d1c3b7] min-h-screen text-white">
-
-    <!-- Header -->
-    <header class="bg-white shadow-md py-4 px-6 md:px-10 sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-        <div class="flex items-center space-x-6 w-full justify-between md:justify-start">
-          <div class="flex items-center space-x-3 select-none">
-            <a href="#">
-              <img
-                src="https://i.ibb.co/MxwBSf64/White-Abstract-Beauty-Girl-T-Shirt-Logo-20250521-085557-0000.jpg"
-                alt="SoulTest Logo"
-                class="h-10 w-10 object-cover rounded-full"
-              />
-            </a>
-            <span class="text-gray-800 text-xl font-bold">SoulTest</span>
-          </div>
-
-          <nav class="hidden md:flex space-x-8 text-gray-700 font-medium text-sm items-center">
-            <a href="#" class="nav-link hover:text-blue-600">Home</a>
-            <a href="#tests" class="nav-link hover:text-blue-600">Tests</a>
-            <a href="#about" class="nav-link hover:text-blue-600">About</a>
-          </nav>
-        </div>
-
-        <!-- Search Bar -->
-        <div class="relative w-full md:w-auto">
-          <span class="absolute inset-y-0 left-4 flex items-center text-gray-400">
-            <i class="fas fa-search"></i>
-          </span>
-          <input
-            type="search"
-            placeholder="Search tests..."
-            class="pl-10 pr-4 py-2 w-full md:w-64 rounded-full text-sm text-gray-700 bg-gray-100 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
-          />
-        </div>
-      </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-6 md:px-10 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
-      <div class="text-left md:w-1/2">
-        <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
-          Take Instant Tests & Get Results.<br>No Login Required!
-        </h1>
-        <p class="text-lg md:text-xl font-light mb-8 text-white">
-          Choose a test, enter your details, and get the report instantly.
-        </p>
-        <a
-          href="#tests"
-          class="bg-white hover:bg-yellow-100 text-black font-semibold text-sm px-6 py-3 rounded-full transition"
-        >
-          Browse Tests
+<header class="bg-white shadow-md py-4 px-6 md:px-10 sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+    <div class="flex items-center space-x-6 w-full justify-between md:justify-start">
+      <div class="flex items-center space-x-3 select-none">
+        <a href="#">
+          <img src="https://i.ibb.co/MxwBSf64/White-Abstract-Beauty-Girl-T-Shirt-Logo-20250521-085557-0000.jpg" alt="SoulTest Logo" class="h-10 w-10 object-cover rounded-full" />
         </a>
+        <span class="text-gray-800 text-xl font-bold">SoulTest</span>
       </div>
+      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium text-sm items-center">
+        <a href="#" class="nav-link hover:text-blue-600">Home</a>
+        <a href="#tests" class="nav-link hover:text-blue-600">Tests</a>
+        <a href="#about" class="nav-link hover:text-blue-600">About</a>
+      </nav>
+    </div>
+    <div class="relative w-full md:w-auto">
+      <select id="testDropdown"
+        class="bg-gray-100 text-sm text-gray-700 px-4 py-2 rounded-full border border-gray-300 focus:outline-none">
+        <option selected disabled hidden>Jump to a test...</option>
+        <option value="test-work-style">Work Style 360</option>
+        <option value="test-reasoning">Reasoning Test</option>
+        <option value="test-eq">Emotional Intelligence</option>
+        <option value="test-reflection">Reflection Test</option>
+        <option value="test-soulmind">Soul-Mind Test</option>
+      </select>
+    </div>
+  </div>
+</header>
 
-      <div class="md:w-1/2 mb-10 md:mb-0">
-        <img
-          src="https://i.ibb.co/0y7Z6MTG/3.png"
-          alt="Hero Illustration"
-          class="w-full max-w-xl mx-auto md:max-w-2xl"
-        />
-      </div>
-    </section>
+<section class="max-w-7xl mx-auto px-6 md:px-10 py-20 flex flex-col-reverse md:flex-row items-center justify-between">
+  <div class="text-left md:w-1/2">
+    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
+      Take Instant Tests & Get Results.<br>No Login Required!
+    </h1>
+    <p class="text-lg md:text-xl font-light mb-8 text-white">
+      Choose a test, enter your details, and get the report instantly.
+    </p>
+    <a href="#tests" class="bg-white hover:bg-yellow-100 text-black font-semibold text-sm px-6 py-3 rounded-full transition">Browse Tests</a>
+  </div>
+  <div class="md:w-1/2 mb-10 md:mb-0">
+    <img src="https://i.ibb.co/0y7Z6MTG/3.png" alt="Hero Illustration" class="w-full max-w-xl mx-auto md:max-w-2xl" />
+  </div>
+</section>
 
-    <!-- Tests Section -->
-    <section id="tests" class="bg-[#fefae0] text-gray-800 py-20 px-6 md:px-10">
-      <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Available Tests</h2>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Test Cards -->
-          <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Personality Quiz</h3>
-              <p class="text-gray-600 mb-4">5 questions, 5 minutes</p>
-            </div>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScRmvMvqQYMx8s_pjRDvGP1p8M4-VUQO1XTaw5gfhDFWwmvqA/viewform?usp=sharing&ouid=105827543647424980406" 
-   target="_blank" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">
-              Start Test
-            </a>
-          </div>
-
-          <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Reasoning Test</h3>
-              <p class="text-gray-600 mb-4">15 questions, 10 minutes</p>
-            </div>
-            <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">
-              Start Test
-            </a>
-          </div>
-
-          <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Emotional Intelligence Test</h3>
-              <p class="text-gray-600 mb-4">12 questions, 8 minutes</p>
-            </div>
-            <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">
-              Start Test
-            </a>
-          </div>
-
-          <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Reflection Test</h3>
-              <p class="text-gray-600 mb-4">12 questions, 8 minutes</p>
-            </div>
-            <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">
-              Start Test
-            </a>
-          </div>
-
-          <div class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300">
-            <div>
-              <h3 class="text-xl font-semibold mb-2">Soul-Mind Test</h3>
-              <p class="text-gray-600 mb-4">11 questions, 8 minutes</p>
-            </div>
-            <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">
-              Start Test
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="about" class="bg-[#283618] text-white py-12 px-6 md:px-10 mt-20">
-      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
-        <div class="md:col-span-2">
-          <h4 class="text-lg font-semibold mb-4">About SoulTest</h4>
-          <p class="text-gray-300">
-            SoulTest offers a simple, no-login way to take mental wellness and personality tests. Just choose a test, fill out a short Google Form, and receive a personalized, insightful report instantly — no sign-up required!
-          </p>
-        </div>
-
+<section id="tests" class="bg-[#fefae0] text-gray-800 py-20 px-6 md:px-10">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Available Tests</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div id="test-work-style" class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300 blink-target">
         <div>
-          <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-          <ul class="space-y-2 text-gray-300">
-            <li><a href="#" class="hover:text-yellow-300 transition">Home</a></li>
-            <li><a href="#tests" class="hover:text-yellow-300 transition">Tests</a></li>
-            <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
-            <li><a href="mailto:admin@gmail.com" class="hover:text-yellow-300 transition">Contact: admin@gmail.com</a></li>
-          </ul>
+          <h3 class="text-xl font-semibold mb-2">Work Style 360</h3>
+          <p class="text-gray-600 mb-2">50 questions, 10 minutes</p>
+          <p class="text-gray-700 text-sm mb-4">Unlock insights about how you work best — your strengths, motivators, and ideal team roles. This short assessment will help you better understand your unique work style and how to thrive in any team or workplace.</p>
         </div>
+        <a href="https://forms.gle/mBYTHzB1PXaXYFXM6" target="_blank" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">Start Test</a>
+      </div>
 
-        <div class="flex flex-col justify-between">
-          <div>
-            <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-            <div class="flex space-x-4 text-xl">
-              <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-facebook"></i></a>
-              <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-linkedin"></i></a>
-            </div>
-          </div>
-          <p class="text-gray-400 text-xs mt-8">&copy; 2024 SoulTest. All rights reserved.</p>
+      <div id="test-reasoning" class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300 blink-target">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Reasoning Test</h3>
+          <p class="text-gray-600 mb-2">15 questions, 10 minutes</p>
+          <p class="text-gray-700 text-sm mb-4">Evaluate your logical thinking and analytical reasoning through this short, engaging test.</p>
+        </div>
+        <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">Start Test</a>
+      </div>
+
+      <div id="test-eq" class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300 blink-target">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Emotional Intelligence Test</h3>
+          <p class="text-gray-600 mb-2">12 questions, 8 minutes</p>
+          <p class="text-gray-700 text-sm mb-4">Discover your EQ and how well you recognize, understand, and manage emotions — yours and others’.</p>
+        </div>
+        <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">Start Test</a>
+      </div>
+
+      <div id="test-reflection" class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300 blink-target">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Reflection Test</h3>
+          <p class="text-gray-600 mb-2">12 questions, 8 minutes</p>
+          <p class="text-gray-700 text-sm mb-4">Assess how reflective and introspective you are in your everyday thoughts and actions.</p>
+        </div>
+        <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">Start Test</a>
+      </div>
+
+      <div id="test-soulmind" class="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between hover:shadow-2xl transition duration-300 blink-target">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Soul-Mind Test</h3>
+          <p class="text-gray-600 mb-2">11 questions, 8 minutes</p>
+          <p class="text-gray-700 text-sm mb-4">Explore the alignment of your thoughts and inner peace to understand your soul-mind harmony.</p>
+        </div>
+        <a href="#" class="mt-auto inline-block text-center bg-[#bc6c25] text-white font-medium py-2 px-4 rounded-full hover:bg-[#dda15e] transition">Start Test</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="about" class="bg-[#283618] text-white py-12 px-6 md:px-10 mt-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 text-sm">
+    <div class="md:col-span-2">
+      <h4 class="text-lg font-semibold mb-4">About SoulTest</h4>
+      <p class="text-gray-300">SoulTest offers a simple, no-login way to take mental wellness and personality tests. Just choose a test, fill out a short Google Form, and receive a personalized, insightful report instantly — no sign-up required!</p>
+    </div>
+    <div>
+      <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="#" class="hover:text-yellow-300 transition">Home</a></li>
+        <li><a href="#tests" class="hover:text-yellow-300 transition">Tests</a></li>
+        <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
+        <li><a href="mailto:admin@gmail.com" class="hover:text-yellow-300 transition">Contact: admin@gmail.com</a></li>
+      </ul>
+    </div>
+    <div class="flex flex-col justify-between">
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+        <div class="flex space-x-4 text-xl">
+          <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-yellow-300 transition"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>
-    </footer>
+      <p class="text-gray-400 text-xs mt-8">&copy; 2024 SoulTest. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn"
-      class="hidden fixed bottom-6 right-6 z-50 bg-[#bc6c25] hover:bg-[#dda15e] text-white p-3 rounded-full shadow-lg transition duration-300">
-      ↑
-    </button>
+<script>
+  document.getElementById('testDropdown').addEventListener('change', function () {
+    const selectedId = this.value;
+    const target = document.getElementById(selectedId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      target.classList.add('blink');
+      setTimeout(() => target.classList.remove('blink'), 3000);
+    }
+  });
+</script>
 
-    <!-- JavaScript Enhancements -->
-    <script>
-      // Scroll to Top
-      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-      window.addEventListener("scroll", () => {
-        scrollToTopBtn.classList.toggle("hidden", window.scrollY < 300);
-      });
-      scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Active Menu Highlight
-      const navLinks = document.querySelectorAll("nav a");
-      const sections = Array.from(navLinks)
-        .map(link => document.querySelector(link.getAttribute("href")))
-        .filter(Boolean);
-
-      window.addEventListener("scroll", () => {
-        let scrollPos = window.scrollY + 110;
-        sections.forEach((section, index) => {
-          if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
-            navLinks.forEach(link => link.classList.remove("text-blue-600", "font-bold"));
-            navLinks[index].classList.add("text-blue-600", "font-bold");
-          }
-        });
-      });
-    </script>
-
-  </body>
+</body>
 </html>
